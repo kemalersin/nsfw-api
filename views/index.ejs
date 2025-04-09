@@ -250,18 +250,18 @@
 
                     <h4 class="text-lg font-medium mt-6 mb-2">URL ile Analiz:</h4>
                     <pre class="code-block"><code>curl -X GET \
-  "http://localhost:3000/predict?url=RESIM_URL&model=MobileNetV2" \
+  "https://nsfw.apimapi.com/predict?url=RESIM_URL&model=MobileNetV2" \
   -H "X-API-Key: sizin_api_keyiniz"</code></pre>
 
                     <h4 class="text-lg font-medium mt-6 mb-2">Dosya Yükleme ile Analiz:</h4>
                     <pre class="code-block"><code>curl -X POST \
-  http://localhost:3000/predict \
+  https://nsfw.apimapi.com/predict \
   -H "X-API-Key: sizin_api_keyiniz" \
   -F "image=@dosya_yolu.jpg"</code></pre>
 
                     <h4 class="text-lg font-medium mt-6 mb-2">Toplu Analiz:</h4>
                     <pre class="code-block"><code>curl -X POST \
-  http://localhost:3000/batch_predict \
+  https://nsfw.apimapi.com/batch_predict \
   -H "X-API-Key: sizin_api_keyiniz" \
   -H "Content-Type: application/json" \
   -d '{"urls": ["URL1", "URL2", "URL3"]}'</code></pre>

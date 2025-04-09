@@ -65,13 +65,13 @@ Sunucu varsayılan olarak 3000 portunda çalışacaktır.
 
 GET isteği ile:
 ```
-http://localhost:3000/predict?url=https://example.com/image.jpg&model=MobileNetV2
+https://nsfw.apimapi.com/predict?url=https://example.com/image.jpg&model=MobileNetV2
 ```
 
 ### Dosya Yükleme ile Sınıflandırma
 
 ```bash
-curl -X POST "http://localhost:3000/predict?model=MobileNetV2" \
+curl -X POST "https://nsfw.apimapi.com/predict?model=MobileNetV2" \
   -H "X-API-Key: YOUR_API_KEY" \
   -F "image=@/path/to/your/image.jpg"
 ```
@@ -81,7 +81,7 @@ curl -X POST "http://localhost:3000/predict?model=MobileNetV2" \
 POST isteği ile birden çok URL'i işleyebilirsiniz:
 
 ```bash
-curl -X POST "http://localhost:3000/batch_predict" \
+curl -X POST "https://nsfw.apimapi.com/batch_predict" \
   -H "Content-Type: application/json" \
   -H "X-API-Key: YOUR_API_KEY" \
   -d '{
@@ -99,7 +99,7 @@ curl -X POST "http://localhost:3000/batch_predict" \
 Kalan token miktarınızı görüntülemek için:
 
 ```bash
-curl "http://localhost:3000/usage_info" \
+curl "https://nsfw.apimapi.com/usage_info" \
   -H "X-API-Key: YOUR_API_KEY"
 ```
 
@@ -108,7 +108,7 @@ curl "http://localhost:3000/usage_info" \
 Admin paneline erişmek için şu URL'i kullanın:
 
 ```
-http://localhost:3000/admin
+https://nsfw.apimapi.com/admin
 ```
 
 Admin panelinde şunları yapabilirsiniz:
