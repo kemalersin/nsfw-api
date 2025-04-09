@@ -1,0 +1,69 @@
+# Ortam Değişkenleri
+.env
+.env.local
+.env.*.local
+
+# Bağımlılıklar
+/node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Derleme çıktıları
+/dist
+/build
+/coverage
+
+# Editör klasörleri ve dosyaları
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+
+# Log dosyaları
+logs
+*.log
+npm-debug.log*
+
+# Runtime verisi
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# TensorFlow.js model dosyaları - büyük boyutlu olabilir
+/models/*.keras
+/models/*.h5
+/models/*.pb
+/models/*.tflite
+
+# Geçici dosyalar
+/tmp
+.tmp
+/temp
+*.tmp
+
+# Veritabanı yedekleri
+*.sql
+*.sqlite
+*.db
+*.bak
+
+# Cache klasörleri
+.sass-cache/
+.npm
+.eslintcache
+.stylelintcache
+
+# Test verileri ve özel klasörler
+/test-results/
+/data
+/uploads
+/__pycache__/
+/secrets 
