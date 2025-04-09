@@ -49,12 +49,6 @@ pids
 /temp
 *.tmp
 
-# Veritabanı yedekleri
-*.sql
-*.sqlite
-*.db
-*.bak
-
 # Cache klasörleri
 .sass-cache/
 .npm
