@@ -51,7 +51,7 @@
                 <h2 class="text-2xl text-secondary">Görsel İçerik Sınıflandırma API'si</h2>
             </header>
 
-            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md mb-6 overflow-hidden">
+            <div class="bg-white rounded-lg shadow-md mb-6 overflow-hidden">
                 <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
                     <h3 class="text-xl font-semibold text-dark dark:text-gray-100">API Durumu</h3>
                 </div>
@@ -64,7 +64,7 @@
                 </div>
             </div>
 
-            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md mb-6">
+            <div class="bg-white rounded-lg shadow-md mb-6">
                 <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
                     <h3 class="text-xl font-semibold text-dark dark:text-gray-100">Test Et</h3>
                 </div>
@@ -191,7 +191,56 @@
                 </div>
             </div>
 
-            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md mb-6 overflow-hidden">
+            <div class="bg-white rounded-lg shadow-md mb-6 overflow-hidden">
+                <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
+                    <h3 class="text-xl font-semibold text-dark dark:text-gray-100">Kullanılan Modeller</h3>
+                </div>
+                <div class="p-6">
+                    <p class="mb-4">API'de kullanılan NSFW sınıflandırma modelleriyle ilgili bilgiler:</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                        <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                            <h4 class="font-bold text-lg mb-2 text-blue-600 dark:text-blue-400">MobileNetV2</h4>
+                            <p class="text-gray-700 dark:text-gray-300 text-sm">Hem hızlı hem de yeterli doğrulukta tahminler sunan dengeli model. Çoğu kullanım durumu için önerilen varsayılan modeldir.</p>
+                            <div class="mt-2">
+                                <span class="text-xs font-medium bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-300 px-2 py-1 rounded-full">Hızlı</span>
+                                <span class="text-xs font-medium bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-300 px-2 py-1 rounded-full">Dengeli</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                            <h4 class="font-bold text-lg mb-2 text-blue-600 dark:text-blue-400">MobileNetV2Mid</h4>
+                            <p class="text-gray-700 dark:text-gray-300 text-sm">Standart MobileNetV2'ye göre daha yüksek doğrulukta sonuçlar sunan, orta düzeyde karmaşıklığa sahip model.</p>
+                            <div class="mt-2">
+                                <span class="text-xs font-medium bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-300 px-2 py-1 rounded-full">Orta Hız</span>
+                                <span class="text-xs font-medium bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-300 px-2 py-1 rounded-full">Yüksek Doğruluk</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                            <h4 class="font-bold text-lg mb-2 text-blue-600 dark:text-blue-400">InceptionV3</h4>
+                            <p class="text-gray-700 dark:text-gray-300 text-sm">En yüksek doğruluk oranına sahip, daha büyük ve daha karmaşık bir model. Hassas sınıflandırma gerektiren durumlar için idealdir.</p>
+                            <div class="mt-2">
+                                <span class="text-xs font-medium bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-300 px-2 py-1 rounded-full">Yavaş</span>
+                                <span class="text-xs font-medium bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-300 px-2 py-1 rounded-full">En Yüksek Doğruluk</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-blue-50 dark:bg-blue-900 dark:bg-opacity-30 text-blue-700 dark:text-blue-200 p-4 rounded-lg mt-6">
+                        <h4 class="font-medium mb-2">Kategoriler:</h4>
+                        <ul class="list-disc pl-5 text-sm">
+                            <li><strong>Drawing:</strong> Çizim ve anime içerikleri</li>
+                            <li><strong>Hentai:</strong> Yetişkinlere yönelik anime içerikleri</li>
+                            <li><strong>Neutral:</strong> Normal, güvenli içerikler</li>
+                            <li><strong>Porn:</strong> Yetişkinlere yönelik açık içerikler</li>
+                            <li><strong>Sexy:</strong> Müstehcen olmamakla birlikte cinsel çekicilik içeren içerikler</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>            
+
+            <div class="bg-white rounded-lg shadow-md mb-6 overflow-hidden">
                 <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
                     <h3 class="text-xl font-semibold text-dark dark:text-gray-100">Hızlı Başlangıç</h3>
                 </div>
@@ -225,7 +274,7 @@
                 </div>
             </div>
 
-            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md mb-6 overflow-hidden">
+            <div class="bg-white rounded-lg shadow-md mb-6 overflow-hidden">
                 <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
                     <h3 class="text-xl font-semibold text-dark dark:text-gray-100">Örnek İstek ve Yanıt</h3>
                 </div>
@@ -277,7 +326,7 @@ image: [dosya içeriği]</code></pre>
                 </div>
             </div>
 
-            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md mb-6 overflow-hidden">
+            <div class="bg-white rounded-lg shadow-md mb-6 overflow-hidden">
                 <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
                     <h3 class="text-xl font-semibold text-dark dark:text-gray-100">API Endpointleri</h3>
                 </div>
@@ -345,10 +394,10 @@ image: [dosya içeriği]</code></pre>
                         </table>
                     </div>
                 </div>
-            </div>
+            </div>            
 
-            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md mb-6 overflow-hidden">
-                <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
+            <div class="bg-white rounded-lg shadow-md mb-6 overflow-hidden">
+                <div class="bg-gray-50 dark:bg-gray-700 px-6 py-4 border-b border-gray-200 dark:border-gray-600">
                     <h3 class="text-xl font-semibold text-dark dark:text-gray-100">API Key Edinme</h3>
                 </div>
                 <div class="p-6">
