@@ -139,7 +139,7 @@ async function getOrCreateIpInfo(ipAddress) {
     // IP bilgisi yoksa oluştur
     const [result] = await pool.query(
       'INSERT INTO ip_rate_limits (ip_address, monthly_token_limit, last_reset_date) VALUES (?, ?, NOW())',
-      [ipAddress, 100]
+      [ipAddress, 1000]
     );
     
     const [newIpInfo] = await pool.query('SELECT * FROM ip_rate_limits WHERE id = ?', [result.insertId]);

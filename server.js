@@ -11,6 +11,9 @@ require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 3000;
 
+// Proxy arkasında çalışıyorsa
+app.set('trust proxy', 1);
+
 // Middleware
 app.use(cors());
 app.use(express.json());
@@ -21,8 +24,8 @@ app.use(session({
   secret: process.env.SESSION_SECRET || 'gizli_anahtar',
   resave: false,
   saveUninitialized: true,
+  proxy: true,
   cookie: { 
-    secure: process.env.NODE_ENV === 'production',
     maxAge: 24 * 60 * 60 * 1000 // 1 gün
   }
 }));

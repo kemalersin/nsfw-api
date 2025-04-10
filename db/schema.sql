@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS api_keys (
     description VARCHAR(255),
     is_unlimited BOOLEAN DEFAULT FALSE,
     unlimited_ips TEXT,
-    monthly_token_limit INT DEFAULT 1000,
+    monthly_token_limit INT DEFAULT 10000,
     tokens_used INT DEFAULT 0,
     auto_reset BOOLEAN DEFAULT TRUE,
     last_reset_date DATETIME,
@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS api_keys (
 CREATE TABLE IF NOT EXISTS ip_rate_limits (
     id INT AUTO_INCREMENT PRIMARY KEY,
     ip_address VARCHAR(45) NOT NULL UNIQUE,
-    monthly_token_limit INT DEFAULT 100,
+    monthly_token_limit INT DEFAULT 1000,
     tokens_used INT DEFAULT 0,
     request_count INT DEFAULT 0,
     last_request_time TIMESTAMP,
