@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temiz Dil API - Yönetici Paneli</title>
-    <script src="/js/tailwind.min.js"></script>
+    <title>NSFW API - Yönetici Paneli</title>
+    <script src="/js/vendor/tailwind.min.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q0JLFPWJ5N"></script>
     <script>
         tailwind.config = {
@@ -36,16 +36,17 @@
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 
-<body class="min-h-screen" data-logged-in="{{ 'true' if logged_in else 'false' }}">
+<body class="min-h-screen">
     <!-- Loading Overlay -->
     <div id="loading-overlay">
+        <div class="spinner"></div>
     </div>
 
     <!-- Page Content -->
-    <div id="page-content" style="display: none;">
+    <div id="page-content">
         <div class="max-w-6xl mx-auto px-4 py-8">
             <header class="text-center mb-10">
-                <h1 class="text-4xl font-bold text-dark mb-2">Temiz Dil API</h1>
+                <h1 class="text-4xl font-bold text-dark mb-2">NSFW API</h1>
                 <h2 class="text-2xl text-secondary mb-2">Yönetici Paneli</h2>
                 <p class="text-gray-500">Hoş geldiniz, <span class="font-medium">Yönetici</span></p>
             </header>
@@ -606,28 +607,17 @@ else:
             </main>
 
             <footer class="text-center py-6 text-gray-600 text-sm">
-                <p>© 2025 Temiz Dil API. Tüm hakları saklıdır.</p>
+                <p>© 2025 NSFW API. Tüm hakları saklıdır.</p>
             </footer>
         </div>
     </div>
-
-    <script>
-        // Hide loading overlay when page is fully loaded
-        window.addEventListener('load', function () {
-            document.getElementById('loading-overlay').style.opacity = '0';
-            document.getElementById('page-content').style.display = 'block';
-
-            setTimeout(function () {
-                document.getElementById('loading-overlay').style.display = 'none';
-            }, 500);
-        });
-    </script>
     <!-- Admin paneli için JavaScript -->
     <% if (loggedIn) { %>
-        <script src="/js/admin.js"></script>
-        <% } %>
+    <script src="/js/app/admin.js"></script>
+    <% } %>
 
-            <script src="/js/theme.js"></script>
+    <script src="/js/app/utils.js"></script>
+    <script src="/js/app/theme.js"></script>
 </body>
 
 </html>

@@ -1,38 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // API durumunu kontrol et
-    checkApiStatus();
-
-    // Test butonuna tıklama olayını ekle
-    document.getElementById('test-button').addEventListener('click', handleTest);
-
-    hideLoading();   
-});
-
-// API durumunu kontrol et
-async function checkApiStatus() {
-    try {
-        const response = await fetch('/health');
-        const data = await response.json();
-        
-        const statusIndicator = document.querySelector('.status-indicator');
-        const statusText = document.querySelector('.status-text');
-        
-        if (data.status === 'healthy') {
-            statusIndicator.className = 'status-indicator bg-green-500';
-            statusText.textContent = 'Çalışıyor';
-        } else {
-            statusIndicator.className = 'status-indicator bg-red-500';
-            statusText.textContent = 'Çalışmıyor';
-        }
-    } catch (error) {
-        console.error('API durumu kontrol edilirken hata:', error);
-        const statusIndicator = document.querySelector('.status-indicator');
-        const statusText = document.querySelector('.status-text');
-        statusIndicator.className = 'status-indicator bg-red-500';
-        statusText.textContent = 'API Bağlantı Hatası';
-    }
-}
-
 // Test işlemini yönet
 async function handleTest() {
     const urlInput = document.getElementById('test-url');
@@ -260,28 +225,11 @@ function toggleImageBlur(imgElement) {
 // Global erişim için window nesnesine ekle
 window.toggleImageBlur = toggleImageBlur;
 
-// Yükleme göstergesini göster
-function showLoading() {
-    const loadingOverlay = document.getElementById('loading-overlay');
-    loadingOverlay.style.display = 'flex';
-    loadingOverlay.style.opacity = '1';
-}
+// Sayfa yüklendiğinde test butonuna tıklama olayını ekle
+document.addEventListener('DOMContentLoaded', () => {
+    // API durumunu kontrol et
+    checkApiStatus();
 
-// Yükleme göstergesini gizle
-function hideLoading() {
-    const loadingOverlay = document.getElementById('loading-overlay');
-    loadingOverlay.style.opacity = '0';
-    setTimeout(() => {
-        loadingOverlay.style.display = 'none';
-    }, 500);
-}
-
-// Sayfa yüklendiğinde yükleme ekranını gizle
-window.addEventListener('load', function () {
-    document.getElementById('loading-overlay').style.opacity = '0';
-    document.getElementById('page-content').style.display = 'block';
-
-    setTimeout(function () {
-        document.getElementById('loading-overlay').style.display = 'none';
-    }, 500);
-}); 
+    // Test butonuna tıklama olayını ekle
+    document.getElementById('test-button').addEventListener('click', handleTest);
+});

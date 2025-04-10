@@ -32,6 +32,10 @@ html.dark body {
     color: var(--dark-text);
 }
 
+#page-content {
+    display: none;  
+}
+
 #loading-overlay {
     position: fixed;
     top: 0;
